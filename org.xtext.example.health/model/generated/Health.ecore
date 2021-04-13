@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="health" nsURI="http://www.xtext.org/example/myhealth/Health"
+    nsPrefix="health">
+  <eClassifiers xsi:type="ecore:EClass" name="HealthProgram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PeopleStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HeightStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="height" eType="#//InputValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WeightStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weight" eType="#//InputValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgeStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="age" eType="#//InputValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenderStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//Gender"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Gender">
+    <eLiterals name="Male" literal="Male"/>
+    <eLiterals name="Female" value="1" literal="Female"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IngestStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nutritiontype" eType="#//nutrition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amount" eType="#//InputValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="nutrition">
+    <eLiterals name="protein" literal="protein"/>
+    <eLiterals name="fat" value="1" literal="fat"/>
+    <eLiterals name="carbohydrate" value="2" literal="carbohydrate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExerciseStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ExerciseType" eType="#//ExerciseType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" eType="#//InputValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdviceStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ad" eType="#//AdviceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AdviceType">
+    <eLiterals name="Eating" literal="Eating"/>
+    <eLiterals name="Sport" value="1" literal="Sport"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ExerciseType">
+    <eLiterals name="walk" literal="walk"/>
+    <eLiterals name="run" value="1" literal="run"/>
+    <eLiterals name="swim" value="2" literal="swim"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputValue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//InputValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RealValue" eSuperTypes="#//InputValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+</ecore:EPackage>

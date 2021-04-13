@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.example.health
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.health
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.example.health; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.example.myhealth.generator,
+ org.xtext.example.myhealth.health,
+ org.xtext.example.myhealth.services,
+ org.xtext.example.myhealth.parser.antlr,
+ org.xtext.example.myhealth.scoping,
+ org.xtext.example.myhealth,
+ org.xtext.example.myhealth.health.util,
+ org.xtext.example.myhealth.health.impl,
+ org.xtext.example.myhealth.serializer,
+ org.xtext.example.myhealth.parser.antlr.internal,
+ org.xtext.example.myhealth.validation
+Import-Package: org.apache.log4j
