@@ -4,6 +4,7 @@
 package org.xtext.example.myhealth.validation;
 
 import org.eclipse.xtext.validation.Check;
+import org.xtext.example.health.typing.validation.HealthTypeSystemValidator;
 import org.xtext.example.myhealth.health.AgeStatement;
 import org.xtext.example.myhealth.health.ExerciseStatement;
 import org.xtext.example.myhealth.health.HealthPackage;
@@ -17,7 +18,7 @@ import org.xtext.example.myhealth.health.WeightStatement;
  *
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
-public class HealthValidator extends AbstractHealthValidator {
+public class HealthValidator extends HealthTypeSystemValidator {
 	
 	public static final String INVALID_NAME= "invalidName";
 	public static final String INVALID_HEIGHT= "invalidHeight";

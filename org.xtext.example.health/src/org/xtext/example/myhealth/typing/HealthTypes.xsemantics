@@ -1,0 +1,41 @@
+import org.xtext.example.myhealth.validation.AbstractHealthValidator
+import org.xtext.example.myhealth.health.AgeStatement
+import org.xtext.example.myhealth.health.IntValue
+import org.xtext.example.myhealth.health.RealValue
+import org.xtext.example.myhealth.health.InputValue
+import org.xtext.example.myhealth.typing.HealthType
+
+system org.xtext.example.health.typing.HealthTypeSystem
+validatorExtends AbstractHealthValidator
+
+judgments{
+	type |- InputValue age : output HealthType
+		cached 
+		error "Cannot type"+stringRep(age)
+	subtype|- HealthType left <:  HealthType right	
+		error stringRep(left)+"is not a subtype of" +stringRep(right)
+	
+}
+axiom TIntLit
+	G|- IntValue exp:HealthType.INT
+axiom TRealLit
+	G|- RealValue exp:HealthType.REAL
+	
+rule Subtyping
+	G|-HealthType left <:  HealthType right	
+from{
+	right===HealthType.REAL or left===right
+}
+checkrule checkage for
+	AgeStatement stmt
+from{
+	empty |- stmt.age : var HealthType stepType
+	empty |-  stepType <:HealthType.INT
+}
+
+
+
+
+
+
+
