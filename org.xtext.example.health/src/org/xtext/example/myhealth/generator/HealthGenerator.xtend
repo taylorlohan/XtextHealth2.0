@@ -40,7 +40,7 @@ class HealthGenerator extends AbstractGenerator {
 	}
 	
 	def String doGenerateClass(HealthProgram program, String className)'''
-	import HealthLibrary.*;
+	import mylanguage.health.library.*;
 				
 				public class «className» {
 		

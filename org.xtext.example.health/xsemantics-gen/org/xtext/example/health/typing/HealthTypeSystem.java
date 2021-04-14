@@ -1,13 +1,13 @@
 package org.xtext.example.health.typing;
 
 import com.google.inject.Provider;
-import it.xsemantics.runtime.ErrorInformation;
-import it.xsemantics.runtime.Result;
-import it.xsemantics.runtime.RuleApplicationTrace;
-import it.xsemantics.runtime.RuleEnvironment;
-import it.xsemantics.runtime.RuleFailedException;
-import it.xsemantics.runtime.XsemanticsProvider;
-import it.xsemantics.runtime.XsemanticsRuntimeSystem;
+import org.eclipse.xsemantics.runtime.ErrorInformation;
+import org.eclipse.xsemantics.runtime.Result;
+import org.eclipse.xsemantics.runtime.RuleApplicationTrace;
+import org.eclipse.xsemantics.runtime.RuleEnvironment;
+import org.eclipse.xsemantics.runtime.RuleFailedException;
+import org.eclipse.xsemantics.runtime.XsemanticsProvider;
+import org.eclipse.xsemantics.runtime.XsemanticsRuntimeSystem;
 import org.eclipse.xtext.util.PolymorphicDispatcher;
 import org.xtext.example.myhealth.health.AgeStatement;
 import org.xtext.example.myhealth.health.InputValue;

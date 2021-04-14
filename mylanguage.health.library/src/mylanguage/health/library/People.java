@@ -40,7 +40,7 @@ public class People {
     }
     public void setSport(String type,float s) {
     	if(type=="run") {
-    		this.sport+=(s*10*(this.weight));//运动公式不清楚
+    		this.sport+=(s*10*(this.weight));
     	}
     	else if(type=="swim") {
     		this.sport+=(s*12*(this.weight));
@@ -66,30 +66,30 @@ public class People {
     	}
     }
     
-    public void suggestionOnEating() {//也可以比较标准体重
+    public void suggestionOnEating() {
     	computeStandard();
     	if((this.intakeEnergy-this.energy)>0) {
-    		System.out.println("intake is greater than standard");
+    		System.out.println("your intake is greater than the standard nuitrition intake, you should control your diet");
     	}
     	else if((this.intakeEnergy-this.energy)<0)
     	{
-    		System.out.println("intake is smaller than standard");
+    		System.out.println("your intake is smaller than the standard nuitrition intake, you should eat more");
     	}
     	else {
-    		System.out.println("intake is equal to standard");
+    		System.out.println("your intake is equal to the standard nuitrition intake, you may not worry about your diet");
     	}
     }
     
     public void suggestionOnSport() {
     	if((this.intakeEnergy-this.sport)>0) {
-    		System.out.println("intake is greater than sport");
+    		System.out.println("your intake is greater than sport, you should do more exercise");
     	}
     	else if((this.intakeEnergy-this.sport)<0)
     	{
-    		System.out.println("intake is smaller than sport");
+    		System.out.println("your intake is smaller than sport, you should pay your attention more to your diet");
     	}
     	else {
-    		System.out.println("intake is equal to sport");
+    		System.out.println("your intake is equal to sport, you shouldn't worry much about your health");
     	}
     }
    
