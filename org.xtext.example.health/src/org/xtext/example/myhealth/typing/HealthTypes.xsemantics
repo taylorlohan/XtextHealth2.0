@@ -13,7 +13,7 @@ judgments{
 		cached 
 		error "Cannot type"+stringRep(age)
 	subtype|- HealthType left <:  HealthType right	
-		error stringRep(left)+"is not a subtype of" +stringRep(right)
+		error stringRep(left)+" is not a subtype of " +stringRep(right)
 	
 }
 axiom TIntLit

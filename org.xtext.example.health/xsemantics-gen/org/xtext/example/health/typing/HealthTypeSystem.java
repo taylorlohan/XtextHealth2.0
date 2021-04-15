@@ -152,7 +152,7 @@ public class HealthTypeSystem extends XsemanticsRuntimeSystem {
   
   protected void subtypeThrowException(final String _error, final String _issue, final Exception _ex, final HealthType left, final HealthType right, final ErrorInformation[] _errorInformations) throws RuleFailedException {
     String _stringRep = this.stringRep(left);
-    String _plus = (_stringRep + "is not a subtype of");
+    String _plus = (_stringRep + " is not a subtype of ");
     String _stringRep_1 = this.stringRep(right);
     String _plus_1 = (_plus + _stringRep_1);
     String error = _plus_1;
