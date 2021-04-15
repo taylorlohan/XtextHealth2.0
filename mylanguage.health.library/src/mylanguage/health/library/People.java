@@ -51,13 +51,13 @@ public class People {
     }
     public void setSport(String type,float s) {
     	if(type=="run") {
-    		this.sport+=(s*10*(this.weight));
+    		this.sport+=(s*8*(this.weight));
     	}
     	else if(type=="swim") {
     		this.sport+=(s*12*(this.weight));
     	}
     	else if(type=="walk") {
-    		this.sport+=(s*4*(this.weight));
+    		this.sport+=(s*5.35*(this.weight));
     	}
     }
     public void computeStandard() {
